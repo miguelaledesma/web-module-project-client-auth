@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { BrowserRouter as Router, NavLink, Route} from 'react-router-dom';
 import Login from './components/LoginForm';
 import FriendsList from './components/FriendList';
 import AddFriend from './components/AddFriend';
@@ -9,8 +9,13 @@ import AddFriend from './components/AddFriend';
 
 function App() {
   return (
-    <Router>
+    
+    
     <div className="App">
+      <NavLink to = "/" >Login</NavLink>
+      <NavLink to = "/friends" > Friends</NavLink>
+      <NavLink to = "/friends/add"> Add Friend</NavLink>
+
       <Route exact path = "/" > 
       <Login /> 
       </Route>
@@ -27,7 +32,7 @@ function App() {
       <AddFriend  /> 
       </Route>
     </div>
-    </Router>
+    
   );
 }
 
