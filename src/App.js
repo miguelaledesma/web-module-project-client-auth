@@ -4,7 +4,22 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 
 const Login = () => {
-  return(<h2>Login</h2>)
+  return(
+      <div> 
+        <h2>Login</h2> 
+    <form>
+      <div>
+      <label htmlFor = "username">Username</label>
+      <input id = "username" /> 
+      </div>
+      <div>
+      <label htmlFor = "password">Password</label>
+      <input id = "password" type = "password"/> 
+      </div> 
+      <button>Login</button>
+    </form>
+     </div>
+  )
 }
 
 
