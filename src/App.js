@@ -15,7 +15,7 @@ function App() {
       <NavLink to = "/" >Login</NavLink>
       <NavLink to = "/friends" > Friends</NavLink>
       <NavLink to = "/friends/add"> Add Friend</NavLink>
-
+      <NavLink to = "/friends"> Log Out</NavLink>
       <Route exact path = "/" > 
       <Login /> 
       </Route>
