@@ -4,6 +4,9 @@ import axios from "axios";
 
 const FriendsList = () => {
     const [friends, setFriends] = useState([])
+   
+     
+   
 
     useEffect(() => {
         const token = localStorage.getItem('token')
@@ -21,6 +24,7 @@ const FriendsList = () => {
     },[])
 
     return(
+        
         <div>
     <h2>Friends List</h2>
     <ul>

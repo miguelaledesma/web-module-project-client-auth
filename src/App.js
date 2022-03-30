@@ -19,6 +19,7 @@ function App() {
       <Route exact path = "/" > 
       <Login /> 
       </Route>
+      {/* <Route path="/" element={<Login login = {Login} />} /> */}
 
       <Route exact path = "/login" > 
       <Login /> 
