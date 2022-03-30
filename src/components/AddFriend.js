@@ -12,9 +12,8 @@ const AddFriend = () => {
     const {push} = useHistory()
     const [form, setForm] = useState(initialFriendValues)
 
-    //  if (!window.localStorage.getItem('token')) {
-    //     return (push("/"))
-    //   } 
+    
+    
     
     const handleChange = (evt) => {
         const { name, value } = evt.target

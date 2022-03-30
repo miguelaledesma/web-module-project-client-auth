@@ -12,6 +12,10 @@ const Login = (props) => {
     const [values, setValues] = useState(initialFormValues)
     const { push } = useHistory()
 
+    // if(!window.localStorage.getItem('token')){
+    //     return props.push("/")
+    // }
+
     const handleChange = (evt) => {
         const {id, value } = evt.target
         setValues({...values, [id]: value})
