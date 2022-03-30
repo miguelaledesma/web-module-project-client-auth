@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import axios from "axios"
+import { useHistory } from "react-router"
 
 const initialFriendValues = {
     name: "", 
@@ -8,11 +9,12 @@ const initialFriendValues = {
 }
 
 const AddFriend = () => { 
+    const {push} = useHistory()
     const [form, setForm] = useState(initialFriendValues)
     
     const handleChange = (evt) => {
-        const { id, value } = evt.target
-        setForm({ ...form, [id]: value })
+        const { name, value } = evt.target
+        setForm({ ...form, [name]: value })
     }
 
     const handleSubmit = (evt) => {
@@ -24,9 +26,11 @@ const AddFriend = () => {
             }
           })
     .then(resp => {
-        console.log(resp)
+        push("/friends")
     })
-    .catch(err => {})
+    .catch(err => {
+        console.error(err)
+    })
 
     }
 
